@@ -13,6 +13,7 @@ Each Individual tutorial has its own numbered folder.
 1. [Tile Map](https://catlikecoding.com/godot/true-top-down-2d/1-tile-map/)
 2. [Player Character](https://catlikecoding.com/godot/true-top-down-2d/2-player-character/)
 3. [Movable Objects](https://catlikecoding.com/godot/true-top-down-2d/3-movable-objects/)
+4. [Light and Shadow](https://catlikecoding.com/godot/true-top-down-2d/4-light-and-shadow/)
 
 This is a work in progress. More parts will be added in due time.
 
