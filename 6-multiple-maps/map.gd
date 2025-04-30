@@ -12,7 +12,7 @@ func _ready() -> void:
 			detector.validity_changed.connect(_on_detector_validity_changed)
 
 
-func _on_detector_validity_changed(valid: bool):
+func _on_detector_validity_changed(valid: bool) -> void:
 	if valid:
 		valid_detector_count += 1
 		if valid_detector_count == registered_detector_count:
@@ -21,7 +21,7 @@ func _on_detector_validity_changed(valid: bool):
 		valid_detector_count -= 1
 
 
-func load_next_map():
+func load_next_map() -> void:
 	var current_map_path := get_tree().current_scene.scene_file_path
 	var split_path := current_map_path.split(".")
 	var next_map_number := split_path[1].to_int() + 1
