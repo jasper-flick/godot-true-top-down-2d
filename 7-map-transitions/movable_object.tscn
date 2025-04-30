@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqy67mam7pouu"]
+
+[ext_resource type="Script" path="res://movable_object.gd" id="1_hxfrg"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_irncw"]
+polygon = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obpkd"]
+size = Vector2(7.9, 7.9)
+
+[sub_resource type="Gradient" id="Gradient_mld41"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_l17ur"]
+gradient = SubResource("Gradient_mld41")
+width = 8
+height = 8
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[node name="MovableObject" type="CharacterBody2D"]
+collision_layer = 3
+motion_mode = 1
+script = ExtResource("1_hxfrg")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_irncw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_obpkd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 2
+texture_filter = 1
+texture = SubResource("GradientTexture2D_l17ur")

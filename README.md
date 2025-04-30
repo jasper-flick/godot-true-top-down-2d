@@ -15,6 +15,8 @@ Each Individual tutorial has its own numbered folder.
 3. [Movable Objects](https://catlikecoding.com/godot/true-top-down-2d/3-movable-objects/)
 4. [Light and Shadow](https://catlikecoding.com/godot/true-top-down-2d/4-light-and-shadow/)
 5. [Detectors](https://catlikecoding.com/godot/true-top-down-2d/5-detectors/)
+6. [Multiple Maps](https://catlikecoding.com/godot/true-top-down-2d/6-multiple-maps/)
+7. [Map Transitions](https://catlikecoding.com/godot/true-top-down-2d/7-map-transitions/)
 
 This is a work in progress. More parts will be added in due time.
 
