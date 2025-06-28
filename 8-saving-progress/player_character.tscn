@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dp0x70lnp1awp"]
 
-[ext_resource type="Script" path="res://player_character.gd" id="1_drj4p"]
+[ext_resource type="Script" uid="uid://fpaopiu0nhaj" path="res://player_character.gd" id="1_drj4p"]
 [ext_resource type="PackedScene" uid="uid://c42eiotc23vsq" path="res://lively_light.tscn" id="2_dbm48"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0bpce"]
@@ -39,6 +39,7 @@ emission_ring_axis = Vector3(0, 0, 1)
 emission_ring_height = 2.08165e-12
 emission_ring_radius = 3.5
 emission_ring_inner_radius = 2.0
+emission_ring_cone_angle = 90.0
 gravity = Vector3(2.08165e-12, 2.08165e-12, 2.08165e-12)
 color = Color(1, 1, 0.47451, 0.247059)
 alpha_curve = SubResource("CurveTexture_nk6s2")

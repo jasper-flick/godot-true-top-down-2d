@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="True Top-Down 2D"
-config/version="6.0"
-run/main_scene="res://maps/map.001.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/version="8.0"
+run/main_scene="uid://bk1rkxiuhfn52"
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]

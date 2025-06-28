@@ -10,6 +10,8 @@ func _ready() -> void:
 		if detector:
 			registered_detector_count += 1
 			detector.validity_changed.connect(_on_detector_validity_changed)
+	
+	Main.map_loaded(scene_file_path)
 
 
 func _on_detector_validity_changed(valid: bool) -> void:
