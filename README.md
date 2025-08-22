@@ -17,6 +17,8 @@ Each Individual tutorial has its own numbered folder.
 5. [Detectors](https://catlikecoding.com/godot/true-top-down-2d/5-detectors/)
 6. [Multiple Maps](https://catlikecoding.com/godot/true-top-down-2d/6-multiple-maps/)
 7. [Map Transitions](https://catlikecoding.com/godot/true-top-down-2d/7-map-transitions/)
+8. [Saving Progress](https://catlikecoding.com/godot/true-top-down-2d/8-saving-progress/)
+9. [Game HUD](https://catlikecoding.com/godot/true-top-down-2d/9-game-hud/)
 
 This is a work in progress. More parts will be added in due time.
 
