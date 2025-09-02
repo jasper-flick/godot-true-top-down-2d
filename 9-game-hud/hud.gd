@@ -21,6 +21,6 @@ func show_map_time(time: float) -> void:
 	map_time_label.text = "%ds" % time
 
 
-func show_new_best_map_time(new_time: int):
+func show_new_best_map_time(new_time: int) -> void:
 	new_best_map_time_label.text = "New best time: %ds" % new_time
 	new_best_map_time_label.visible = true
