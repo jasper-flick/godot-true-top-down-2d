@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://c42eiotc23vsq"]
+
+[ext_resource type="Script" uid="uid://cgoe12geigody" path="res://lively_light.gd" id="1_tpdam"]
+
+[sub_resource type="Gradient" id="Gradient_k8ld2"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mhsb8"]
+gradient = SubResource("Gradient_k8ld2")
+width = 192
+height = 192
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[node name="LivelyLight" type="Node2D" node_paths=PackedStringArray("light_a", "light_b")]
+script = ExtResource("1_tpdam")
+light_a = NodePath("LightA")
+light_b = NodePath("LightB")
+
+[node name="LightA" type="PointLight2D" parent="."]
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_mhsb8")
+
+[node name="LightB" type="PointLight2D" parent="."]
+range_item_cull_mask = 2
+shadow_enabled = true
+shadow_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_mhsb8")

@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3 uid="uid://cw4q2habmqtk8"]
+
+[ext_resource type="Script" uid="uid://cv3i66vvgu2ra" path="res://hud.gd" id="1_37p78"]
+
+[node name="HUD" type="CanvasLayer" node_paths=PackedStringArray("map_name_label", "map_time_label", "map_detector_count_label", "map_travel_distance", "new_best_map_scores_label")]
+layer = 3
+script = ExtResource("1_37p78")
+map_name_label = NodePath("MapName")
+map_time_label = NodePath("MapTime")
+map_detector_count_label = NodePath("MapDetectorCount")
+map_travel_distance = NodePath("MapTravelDistance")
+new_best_map_scores_label = NodePath("NewBestMapScores")
+
+[node name="MapName" type="Label" parent="."]
+offset_left = 16.0
+offset_right = 76.0
+offset_bottom = 16.0
+theme_override_font_sizes/font_size = 11
+text = "Map Name"
+
+[node name="MapTime" type="Label" parent="."]
+offset_left = 324.0
+offset_right = 384.0
+offset_bottom = 16.0
+theme_override_font_sizes/font_size = 11
+text = "0s"
+horizontal_alignment = 2
+
+[node name="MapDetectorCount" type="Label" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 324.0
+offset_top = -16.0
+offset_right = 384.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "00 / 00"
+horizontal_alignment = 2
+
+[node name="MapTravelDistance" type="Label" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -16.0
+offset_right = 76.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "0px"
+
+[node name="NewBestMapScores" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -11.5
+offset_right = 0.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "New Best Time
+New Best Travel Distance"
+horizontal_alignment = 1
