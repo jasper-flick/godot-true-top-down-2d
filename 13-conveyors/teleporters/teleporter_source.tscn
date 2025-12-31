@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://dap4w0xnro5ms"]
+
+[ext_resource type="Script" uid="uid://cdbb4xwhu0vne" path="res://teleporters/teleporter_source.gd" id="1_iyk8j"]
+[ext_resource type="Texture2D" uid="uid://blq78ijp12vd1" path="res://teleporters/teleporter_source.png" id="2_4g2ci"]
+[ext_resource type="Shader" uid="uid://u1jp4gvurjpa" path="res://teleporters/teleporter_line.gdshader" id="3_y66v5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgkqt"]
+size = Vector2(16, 16)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_q0aho"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_yru7e"]
+blend_mode = 1
+light_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_yru7e"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_076io"]
+gradient = SubResource("Gradient_yru7e")
+width = 8
+height = 8
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0o7fd"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(6, 6, 0)
+gravity = Vector3(0, 0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jjc5y"]
+shader = ExtResource("3_y66v5")
+
+[node name="Teleporter Source" type="Area2D" node_paths=PackedStringArray("sprite", "line", "colissionShape", "particles")]
+collision_mask = 3
+monitorable = false
+script = ExtResource("1_iyk8j")
+sprite = NodePath("Sprite2D")
+line = NodePath("Line2D")
+colissionShape = NodePath("CollisionShape2D")
+particles = NodePath("GPUParticles2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wgkqt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.5019608)
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_q0aho")
+texture = ExtResource("2_4g2ci")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_yru7e")
+emitting = false
+amount = 30
+texture = SubResource("GradientTexture2D_076io")
+lifetime = 0.25
+one_shot = true
+fixed_fps = 60
+interpolate = false
+fract_delta = false
+process_material = SubResource("ParticleProcessMaterial_0o7fd")
+
+[node name="Line2D" type="Line2D" parent="."]
+z_index = 1000
+material = SubResource("ShaderMaterial_jjc5y")
+width = 3.0
+texture_mode = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
