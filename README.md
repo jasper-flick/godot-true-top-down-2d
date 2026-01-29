@@ -23,6 +23,7 @@ Each Individual tutorial has its own numbered folder.
 11. [Game HUD](https://catlikecoding.com/godot/true-top-down-2d/11-showing-best-scores/)
 12. [Game HUD](https://catlikecoding.com/godot/true-top-down-2d/12-teleporters/)
 13. [Game HUD](https://catlikecoding.com/godot/true-top-down-2d/13-conveyors/)
+14. [Game HUD](https://catlikecoding.com/godot/true-top-down-2d/14-pausing/)
 
 This is a work in progress. More parts will be added in due time.
 

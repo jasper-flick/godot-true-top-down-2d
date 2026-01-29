@@ -1,0 +1,41 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="True Top-Down 2D"
+config/version="14.0"
+run/main_scene="uid://bk1rkxiuhfn52"
+config/features=PackedStringArray("4.5", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Main="*res://main.gd"
+MapTransition="*res://map_transition.tscn"
+HUD="*res://hud.tscn"
+PauseMenu="*res://pause_menu.tscn"
+
+[display]
+
+window/size/viewport_width=400
+window/size/viewport_height=240
+window/size/mode=4
+window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
+window/snap/snap_2d_transforms_to_pixel=false
+
+[filesystem]
+
+import/blender/enabled=false
+
+[physics]
+
+2d/default_gravity=0.0

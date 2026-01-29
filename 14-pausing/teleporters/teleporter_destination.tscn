@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://da4l644boage6"]
+
+[ext_resource type="Script" uid="uid://dwu02xxnacil7" path="res://teleporters/teleporter_destination.gd" id="1_a8g44"]
+[ext_resource type="Texture2D" uid="uid://cpc3pnpy5ytd2" path="res://teleporters/teleporter_destination.png" id="2_jq1q4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgkqt"]
+size = Vector2(16, 16)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_q0aho"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qlgbt"]
+blend_mode = 1
+light_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_1t2jy"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_h7m5w"]
+gradient = SubResource("Gradient_1t2jy")
+width = 8
+height = 8
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8soqw"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(6, 6, 0)
+gravity = Vector3(0, 0, 0)
+
+[node name="Teleporter Destination" type="Area2D" node_paths=PackedStringArray("sprite", "particles")]
+collision_mask = 3
+monitorable = false
+script = ExtResource("1_a8g44")
+sprite = NodePath("Sprite2D")
+particles = NodePath("GPUParticles2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wgkqt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.5019608)
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_q0aho")
+texture = ExtResource("2_jq1q4")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_qlgbt")
+emitting = false
+amount = 30
+texture = SubResource("GradientTexture2D_h7m5w")
+lifetime = 0.25
+one_shot = true
+fixed_fps = 60
+interpolate = false
+fract_delta = false
+process_material = SubResource("ParticleProcessMaterial_8soqw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
