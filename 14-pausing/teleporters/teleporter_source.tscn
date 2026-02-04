@@ -35,13 +35,13 @@ gravity = Vector3(0, 0, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jjc5y"]
 shader = ExtResource("3_y66v5")
 
-[node name="Teleporter Source" type="Area2D" node_paths=PackedStringArray("sprite", "line", "colissionShape", "particles")]
+[node name="Teleporter Source" type="Area2D" node_paths=PackedStringArray("sprite", "line", "collision_shape", "particles")]
 collision_mask = 3
 monitorable = false
 script = ExtResource("1_iyk8j")
 sprite = NodePath("Sprite2D")
 line = NodePath("Line2D")
-colissionShape = NodePath("CollisionShape2D")
+collision_shape = NodePath("CollisionShape2D")
 particles = NodePath("GPUParticles2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -6,8 +6,8 @@ extends Area2D
 		length = new_length
 		if line and line.points.size() == 2 and line.points[1].x != length:
 			line.points[1] = Vector2(length, 0.0)
-			colissionShape.position = Vector2(length * 0.5, 0.0)
-			var rect := colissionShape.shape as RectangleShape2D
+			collision_shape.position = Vector2(length * 0.5, 0.0)
+			var rect := collision_shape.shape as RectangleShape2D
 			rect.size = Vector2(length, 12.0)
 
 ## Conveyor speed, in pixels per second.
@@ -20,7 +20,7 @@ extends Area2D
 					speed / line.texture.get_size().x
 			)
 
-@export var colissionShape: CollisionShape2D
+@export var collision_shape: CollisionShape2D
 @export var line: Line2D
 
 

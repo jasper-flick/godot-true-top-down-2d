@@ -10,7 +10,7 @@ extends Area2D
 
 @export var line: Line2D
 
-@export var colissionShape: CollisionShape2D
+@export var collision_shape: CollisionShape2D
 
 @export var particles: GPUParticles2D
 
@@ -27,7 +27,7 @@ func _ready() -> void:
 		sprite.modulate = invalid_color
 		set_physics_process(false)
 	else:
-		destination.validity_changed.connect(_on_detector_validity_changed)
+		destination.validity_changed.connect(_on_destination_validity_changed)
 		sprite.modulate = valid_color
 		destination.sprite.modulate = valid_color
 		particles.modulate = valid_color
@@ -42,7 +42,7 @@ func _physics_process(_delta: float) -> void:
 		set_physics_process(false)
 		return
 	objects.is_empty()
-	var own_rect := colissionShape.shape.get_rect()
+	var own_rect := collision_shape.shape.get_rect()
 	own_rect.position += position
 	
 	for object in objects:
@@ -52,7 +52,7 @@ func _physics_process(_delta: float) -> void:
 			destination.particles.emitting = true
 
 
-func _on_detector_validity_changed(valid: bool) -> void:
+func _on_destination_validity_changed(valid: bool) -> void:
 	is_active = valid
 	set_physics_process(valid)
 	var color := valid_color if valid else invalid_color

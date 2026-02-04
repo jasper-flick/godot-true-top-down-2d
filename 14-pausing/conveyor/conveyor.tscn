@@ -13,11 +13,11 @@ resource_local_to_scene = true
 shader = ExtResource("2_0w264")
 shader_parameter/speed = 2.5
 
-[node name="Conveyor" type="Area2D" node_paths=PackedStringArray("colissionShape", "line")]
+[node name="Conveyor" type="Area2D" node_paths=PackedStringArray("collision_shape", "line")]
 collision_mask = 3
 monitorable = false
 script = ExtResource("1_1318w")
-colissionShape = NodePath("CollisionShape2D")
+collision_shape = NodePath("CollisionShape2D")
 line = NodePath("Line2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
