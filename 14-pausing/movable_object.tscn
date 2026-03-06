@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bqy67mam7pouu"]
+[gd_scene format=3 uid="uid://bqy67mam7pouu"]
 
 [ext_resource type="Script" uid="uid://on8oe1ncp37d" path="res://movable_object.gd" id="1_hxfrg"]
 
@@ -18,19 +18,19 @@ fill = 2
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1, 0.5)
 
-[node name="MovableObject" type="CharacterBody2D" node_paths=PackedStringArray("colission_shape")]
+[node name="MovableObject" type="CharacterBody2D" unique_id=1564219147 node_paths=PackedStringArray("colission_shape")]
 collision_layer = 3
 motion_mode = 1
 script = ExtResource("1_hxfrg")
 colission_shape = NodePath("CollisionShape2D")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1801364798]
 occluder = SubResource("OccluderPolygon2D_irncw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1936738017]
 shape = SubResource("RectangleShape2D_obpkd")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1197882058]
 light_mask = 2
 texture_filter = 1
 texture = SubResource("GradientTexture2D_l17ur")

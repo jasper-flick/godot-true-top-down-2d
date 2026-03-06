@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ck27a2go05ndx"]
+[gd_scene format=3 uid="uid://ck27a2go05ndx"]
 
 [ext_resource type="Script" uid="uid://bumdq3jb3l508" path="res://conveyor/conveyor.gd" id="1_1318w"]
 [ext_resource type="Shader" uid="uid://52jq3bxmccs4" path="res://conveyor/conveyor.gdshader" id="2_0w264"]
@@ -13,19 +13,19 @@ resource_local_to_scene = true
 shader = ExtResource("2_0w264")
 shader_parameter/speed = 2.5
 
-[node name="Conveyor" type="Area2D" node_paths=PackedStringArray("collision_shape", "line")]
+[node name="Conveyor" type="Area2D" unique_id=316547918 node_paths=PackedStringArray("collision_shape", "line")]
 collision_mask = 3
 monitorable = false
 script = ExtResource("1_1318w")
 collision_shape = NodePath("CollisionShape2D")
 line = NodePath("Line2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=505238414]
 visible = false
 position = Vector2(16, 0)
 shape = SubResource("RectangleShape2D_1318w")
 
-[node name="Line2D" type="Line2D" parent="."]
+[node name="Line2D" type="Line2D" parent="." unique_id=2057456293]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_1318w")
 points = PackedVector2Array(0, 0, 32, 0)

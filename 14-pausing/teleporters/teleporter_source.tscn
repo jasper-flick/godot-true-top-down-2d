@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dap4w0xnro5ms"]
+[gd_scene format=3 uid="uid://dap4w0xnro5ms"]
 
 [ext_resource type="Script" uid="uid://cdbb4xwhu0vne" path="res://teleporters/teleporter_source.gd" id="1_iyk8j"]
 [ext_resource type="Texture2D" uid="uid://blq78ijp12vd1" path="res://teleporters/teleporter_source.png" id="2_4g2ci"]
@@ -35,7 +35,7 @@ gravity = Vector3(0, 0, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jjc5y"]
 shader = ExtResource("3_y66v5")
 
-[node name="Teleporter Source" type="Area2D" node_paths=PackedStringArray("sprite", "line", "collision_shape", "particles")]
+[node name="Teleporter Source" type="Area2D" unique_id=1409650033 node_paths=PackedStringArray("sprite", "line", "collision_shape", "particles")]
 collision_mask = 3
 monitorable = false
 script = ExtResource("1_iyk8j")
@@ -44,16 +44,16 @@ line = NodePath("Line2D")
 collision_shape = NodePath("CollisionShape2D")
 particles = NodePath("GPUParticles2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1940653013]
 shape = SubResource("RectangleShape2D_wgkqt")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1610913453]
 modulate = Color(1, 1, 1, 0.5019608)
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_q0aho")
 texture = ExtResource("2_4g2ci")
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1067610743]
 material = SubResource("CanvasItemMaterial_yru7e")
 emitting = false
 amount = 30
@@ -65,7 +65,7 @@ interpolate = false
 fract_delta = false
 process_material = SubResource("ParticleProcessMaterial_0o7fd")
 
-[node name="Line2D" type="Line2D" parent="."]
+[node name="Line2D" type="Line2D" parent="." unique_id=703297623]
 z_index = 1000
 material = SubResource("ShaderMaterial_jjc5y")
 width = 3.0

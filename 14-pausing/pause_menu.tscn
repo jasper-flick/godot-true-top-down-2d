@@ -1,13 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://ca51utmqii21a"]
+[gd_scene format=3 uid="uid://ca51utmqii21a"]
 
 [ext_resource type="Script" uid="uid://b5a26ohi372qc" path="res://pause_menu.gd" id="1_hdmo1"]
 
-[node name="PauseMenu" type="CanvasLayer"]
+[node name="PauseMenu" type="CanvasLayer" unique_id=1198196177]
 process_mode = 3
 layer = 5
 script = ExtResource("1_hdmo1")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1672670161]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -15,7 +15,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.3019608, 0.3019608, 0.3019608, 0.9019608)
 
-[node name="MenuButtons" type="Control" parent="."]
+[node name="MenuButtons" type="Control" parent="." unique_id=38440216]
 custom_minimum_size = Vector2(100, 80)
 layout_mode = 3
 anchors_preset = 8
@@ -30,7 +30,7 @@ offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ResumeButton" type="Button" parent="MenuButtons"]
+[node name="ResumeButton" type="Button" parent="MenuButtons" unique_id=1244880195]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -38,7 +38,7 @@ offset_bottom = 31.0
 grow_horizontal = 2
 text = "Resume"
 
-[node name="RestartButton" type="Button" parent="MenuButtons"]
+[node name="RestartButton" type="Button" parent="MenuButtons" unique_id=1485652023]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0

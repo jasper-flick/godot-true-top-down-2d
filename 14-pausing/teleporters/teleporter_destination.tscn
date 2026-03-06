@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://da4l644boage6"]
+[gd_scene format=3 uid="uid://da4l644boage6"]
 
 [ext_resource type="Script" uid="uid://dwu02xxnacil7" path="res://teleporters/teleporter_destination.gd" id="1_a8g44"]
 [ext_resource type="Texture2D" uid="uid://cpc3pnpy5ytd2" path="res://teleporters/teleporter_destination.png" id="2_jq1q4"]
@@ -31,23 +31,23 @@ emission_shape = 3
 emission_box_extents = Vector3(6, 6, 0)
 gravity = Vector3(0, 0, 0)
 
-[node name="Teleporter Destination" type="Area2D" node_paths=PackedStringArray("sprite", "particles")]
+[node name="Teleporter Destination" type="Area2D" unique_id=1682779986 node_paths=PackedStringArray("sprite", "particles")]
 collision_mask = 3
 monitorable = false
 script = ExtResource("1_a8g44")
 sprite = NodePath("Sprite2D")
 particles = NodePath("GPUParticles2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1587519842]
 shape = SubResource("RectangleShape2D_wgkqt")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1506413219]
 modulate = Color(1, 1, 1, 0.5019608)
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_q0aho")
 texture = ExtResource("2_jq1q4")
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=766211454]
 material = SubResource("CanvasItemMaterial_qlgbt")
 emitting = false
 amount = 30

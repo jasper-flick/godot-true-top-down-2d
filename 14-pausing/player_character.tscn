@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dp0x70lnp1awp"]
+[gd_scene format=3 uid="uid://dp0x70lnp1awp"]
 
 [ext_resource type="Script" uid="uid://fpaopiu0nhaj" path="res://player_character.gd" id="1_drj4p"]
 [ext_resource type="PackedScene" uid="uid://c42eiotc23vsq" path="res://lively_light.tscn" id="2_dbm48"]
@@ -56,20 +56,20 @@ gravity = Vector3(2.08165e-12, 2.08165e-12, 2.08165e-12)
 color = Color(1, 1, 0.47451, 0.247059)
 alpha_curve = SubResource("CurveTexture_nk6s2")
 
-[node name="PlayerCharacter" type="CharacterBody2D" node_paths=PackedStringArray("colission_shape")]
+[node name="PlayerCharacter" type="CharacterBody2D" unique_id=1637826843 node_paths=PackedStringArray("colission_shape")]
 motion_mode = 1
 script = ExtResource("1_drj4p")
 colission_shape = NodePath("CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=78672239]
 shape = SubResource("CircleShape2D_0bpce")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1739236827]
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_eis5u")
 texture = SubResource("GradientTexture2D_66q4f")
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1399913295]
 material = SubResource("CanvasItemMaterial_uqurk")
 amount = 30
 texture = SubResource("GradientTexture2D_dbueg")
@@ -78,4 +78,4 @@ interpolate = false
 fract_delta = false
 process_material = SubResource("ParticleProcessMaterial_w0uuj")
 
-[node name="LivelyLight" parent="." instance=ExtResource("2_dbm48")]
+[node name="LivelyLight" parent="." unique_id=1436189655 instance=ExtResource("2_dbm48")]

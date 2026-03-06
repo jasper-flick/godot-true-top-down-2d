@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cfq4dnyqev3sm"]
+[gd_scene format=3 uid="uid://cfq4dnyqev3sm"]
 
 [ext_resource type="Script" uid="uid://napvaw5g8duc" path="res://map_transition.gd" id="1_kped0"]
 
@@ -126,32 +126,30 @@ _data = {
 &"exit_map": SubResource("Animation_7ei42")
 }
 
-[node name="MapTransition" type="Node" node_paths=PackedStringArray("animation_player")]
+[node name="MapTransition" type="Node" unique_id=662650311 node_paths=PackedStringArray("animation_player")]
 process_mode = 3
 script = ExtResource("1_kped0")
 animation_player = NodePath("AnimationPlayer")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=175655270]
 root_node = NodePath("../CanvasLayer/FadeRect")
-libraries = {
-"": SubResource("AnimationLibrary_388s4")
-}
+libraries/ = SubResource("AnimationLibrary_388s4")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1390279089]
 layer = 2
 
-[node name="FadeRect" type="ColorRect" parent="CanvasLayer"]
+[node name="FadeRect" type="ColorRect" parent="CanvasLayer" unique_id=352138867]
 offset_right = 400.0
 offset_bottom = 240.0
 color = Color(0, 0, 0, 1)
 
-[node name="SlideRectLeft" type="ColorRect" parent="CanvasLayer"]
+[node name="SlideRectLeft" type="ColorRect" parent="CanvasLayer" unique_id=1088445738]
 offset_right = 200.0
 offset_bottom = 240.0
 scale = Vector2(1e-05, 1)
 color = Color(0, 0, 0, 1)
 
-[node name="SlideRectRight" type="ColorRect" parent="CanvasLayer"]
+[node name="SlideRectRight" type="ColorRect" parent="CanvasLayer" unique_id=2127576768]
 offset_left = 400.0
 offset_right = 600.0
 offset_bottom = 240.0

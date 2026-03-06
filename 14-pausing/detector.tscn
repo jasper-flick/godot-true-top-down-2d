@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://by76vb4rt7pue"]
+[gd_scene format=3 uid="uid://by76vb4rt7pue"]
 
 [ext_resource type="Script" uid="uid://cva53g77vgubi" path="res://detector.gd" id="1_nqra2"]
 
@@ -20,16 +20,16 @@ fill = 2
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1, 0.5)
 
-[node name="Detector" type="Area2D" node_paths=PackedStringArray("sprite")]
+[node name="Detector" type="Area2D" unique_id=99800102 node_paths=PackedStringArray("sprite")]
 collision_mask = 2
 monitorable = false
 script = ExtResource("1_nqra2")
 sprite = NodePath("Sprite2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=331505099]
 shape = SubResource("RectangleShape2D_wgkqt")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1480000499]
 modulate = Color(1, 0, 0, 1)
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_q0aho")
