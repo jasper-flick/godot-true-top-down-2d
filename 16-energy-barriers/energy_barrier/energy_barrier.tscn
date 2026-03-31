@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://o7agj1ux3yd1"]
+
+[ext_resource type="Script" uid="uid://coarho5274fer" path="res://energy_barrier/energy_barrier.gd" id="1_yv4p2"]
+[ext_resource type="Shader" uid="uid://bgx1o3w78vmxt" path="res://energy_barrier/energy_barrier.gdshader" id="2_yv4p2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1318w"]
+resource_local_to_scene = true
+size = Vector2(32, 8)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_giv7q"]
+resource_local_to_scene = true
+shader = ExtResource("2_yv4p2")
+shader_parameter/segment_count = 4.0
+shader_parameter/pulse_offsets = Vector4(1.8711361, 3.8205566, 0.75559366, 3.6108985)
+shader_parameter/pulse_speeds = Vector4(2.0123913, 5.5036077, -3.6608996, -8.142509)
+shader_parameter/wave_wiggles_speeds = Vector4(2.6774476, 3.8643224, 10.444264, -8.889337)
+
+[node name="EnergyBarrier" type="StaticBody2D" unique_id=836955502 node_paths=PackedStringArray("collision_shape", "line")]
+position = Vector2(0, -1)
+collision_layer = 4
+script = ExtResource("1_yv4p2")
+collision_shape = NodePath("CollisionShape2D")
+line = NodePath("Line2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=505238414]
+visible = false
+position = Vector2(16, 0)
+shape = SubResource("RectangleShape2D_1318w")
+
+[node name="Line2D" type="Line2D" parent="." unique_id=2057456293]
+material = SubResource("ShaderMaterial_giv7q")
+points = PackedVector2Array(0, 0, 32, 0)
+width = 8.0
+texture_mode = 1
