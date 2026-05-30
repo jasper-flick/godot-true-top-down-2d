@@ -19,11 +19,13 @@ Each Individual tutorial has its own numbered folder.
 7. [Map Transitions](https://catlikecoding.com/godot/true-top-down-2d/7-map-transitions/)
 8. [Saving Progress](https://catlikecoding.com/godot/true-top-down-2d/8-saving-progress/)
 9. [Game HUD](https://catlikecoding.com/godot/true-top-down-2d/9-game-hud/)
-10. [Game HUD](https://catlikecoding.com/godot/true-top-down-2d/10-extra-map-info/)
-11. [Game HUD](https://catlikecoding.com/godot/true-top-down-2d/11-showing-best-scores/)
-12. [Game HUD](https://catlikecoding.com/godot/true-top-down-2d/12-teleporters/)
-13. [Game HUD](https://catlikecoding.com/godot/true-top-down-2d/13-conveyors/)
-14. [Game HUD](https://catlikecoding.com/godot/true-top-down-2d/14-pausing/)
+10. [Extra Map Info](https://catlikecoding.com/godot/true-top-down-2d/10-extra-map-info/)
+11. [Showing Best Scores](https://catlikecoding.com/godot/true-top-down-2d/11-showing-best-scores/)
+12. [Teleporters](https://catlikecoding.com/godot/true-top-down-2d/12-teleporters/)
+13. [Conveyors](https://catlikecoding.com/godot/true-top-down-2d/13-conveyors/)
+14. [Pausing](https://catlikecoding.com/godot/true-top-down-2d/14-pausing/)
+15. [Teleporter Tooling](https://catlikecoding.com/godot/true-top-down-2d/15-teleporter-tooling/)
+16. [Energy Barriers](https://catlikecoding.com/godot/true-top-down-2d/16-energy-barriers/)
 
 ## Giving Credit
 
