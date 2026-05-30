@@ -25,8 +25,6 @@ Each Individual tutorial has its own numbered folder.
 13. [Game HUD](https://catlikecoding.com/godot/true-top-down-2d/13-conveyors/)
 14. [Game HUD](https://catlikecoding.com/godot/true-top-down-2d/14-pausing/)
 
-This is a work in progress. More parts will be added in due time.
-
 ## Giving Credit
 
 If you want to credit me in your work you can do so by mentioning [Jasper Flick](https://catlikecoding.com/jasper-flick/) and/or [Catlike Coding](https://catlikecoding.com).
