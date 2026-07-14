@@ -4,8 +4,11 @@ extends StaticBody2D
 @export_range(12, 400) var length := 32 :
 	set(new_length):
 		length = new_length
-		if line and line.points.size() == 2 and line.points[1].x != length:
-			line.points[1] = Vector2(length, 0.0)
+		if (
+				line and line.get_point_count() == 2
+				and line.get_point_position(1).x != length
+		):
+			line.set_point_position(1, Vector2(length, 0.0))
 			collision_shape.position = Vector2(length * 0.5, 0.0)
 			var rect := collision_shape.shape as RectangleShape2D
 			rect.size = Vector2(length, 8.0)

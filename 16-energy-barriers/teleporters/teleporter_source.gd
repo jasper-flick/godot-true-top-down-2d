@@ -43,13 +43,13 @@ extends Area2D
 			destination = new_destination
 			if not destination:
 				sprite.modulate = invalid_color
-				line.points[1] = Vector2.ZERO
+				line.set_point_position(1, Vector2.ZERO)
 			else:
 				sprite.modulate = valid_color
 				destination.sprite.modulate = valid_color
 				destination.particles.modulate = valid_color
 				line.modulate = valid_color
-				line.points[1] = destination.position - position
+				line.set_point_position(1, destination.position - position)
 				destination.position_changed.connect(
 						_on_destination_position_changed
 				)
@@ -70,7 +70,7 @@ func _ready() -> void:
 
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_TRANSFORM_CHANGED and destination:
-		line.points[1] = destination.position - position
+		line.set_point_position(1, destination.position - position)
 
 
 func _physics_process(_delta: float) -> void:
@@ -89,7 +89,7 @@ func _physics_process(_delta: float) -> void:
 
 
 func _on_destination_position_changed() -> void:
-	line.points[1] = destination.position - position
+	line.set_point_position(1, destination.position - position)
 
 
 func _on_destination_validity_changed(valid: bool) -> void:
